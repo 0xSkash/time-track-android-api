@@ -21,15 +21,20 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * ClientTokenResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T14:35:13.385984+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T16:02:38.566363+02:00[Europe/Berlin]")
 public class ClientTokenResponse {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)
   private String token;
+
+  public static final String SERIALIZED_NAME_USER_ID = "userId";
+  @SerializedName(SERIALIZED_NAME_USER_ID)
+  private UUID userId;
 
   public ClientTokenResponse() {
   }
@@ -56,6 +61,28 @@ public class ClientTokenResponse {
   }
 
 
+  public ClientTokenResponse userId(UUID userId) {
+    
+    this.userId = userId;
+    return this;
+  }
+
+   /**
+   * Get userId
+   * @return userId
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getUserId() {
+    return userId;
+  }
+
+
+  public void setUserId(UUID userId) {
+    this.userId = userId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -65,12 +92,13 @@ public class ClientTokenResponse {
       return false;
     }
     ClientTokenResponse clientTokenResponse = (ClientTokenResponse) o;
-    return Objects.equals(this.token, clientTokenResponse.token);
+    return Objects.equals(this.token, clientTokenResponse.token) &&
+        Objects.equals(this.userId, clientTokenResponse.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token);
+    return Objects.hash(token, userId);
   }
 
   @Override
@@ -78,6 +106,7 @@ public class ClientTokenResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClientTokenResponse {\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
