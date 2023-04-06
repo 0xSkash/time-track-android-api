@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * ClientTokenResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T12:21:49.983529+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T14:35:13.385984+02:00[Europe/Berlin]")
 public class ClientTokenResponse {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)

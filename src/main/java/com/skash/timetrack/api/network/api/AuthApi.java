@@ -23,13 +23,12 @@ public interface AuthApi {
   /**
    * Login in User
    * Endpoint for User authentication
-   * @param authorization Bearer Token used to authenticate user (required)
-   * @param xAuth2FA 6 digit 2FA Code (optional)
+   * @param authorization Basic Auth (required)
    * @return Observable&lt;ClientTokenResponse&gt;
    */
   @POST("auth/login")
   Observable<ClientTokenResponse> authLoginPost(
-    @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Header("X-Auth-2FA") Integer xAuth2FA
+    @retrofit2.http.Header("Authorization") String authorization
   );
 
   /**

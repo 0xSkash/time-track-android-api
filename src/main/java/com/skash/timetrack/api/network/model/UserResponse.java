@@ -26,7 +26,7 @@ import java.util.UUID;
 /**
  * UserResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T12:21:49.983529+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-06T14:35:13.385984+02:00[Europe/Berlin]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
@@ -36,17 +36,17 @@ public class UserResponse {
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
-  @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
 
   public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
   @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
   private Boolean twoFactorEnabled;
 
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
+  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  private String lastName;
 
   public UserResponse() {
   }
@@ -95,25 +95,25 @@ public class UserResponse {
   }
 
 
-  public UserResponse lastName(String lastName) {
+  public UserResponse email(String email) {
     
-    this.lastName = lastName;
+    this.email = email;
     return this;
   }
 
    /**
-   * Get lastName
-   * @return lastName
+   * Get email
+   * @return email
   **/
   @javax.annotation.Nullable
 
-  public String getLastName() {
-    return lastName;
+  public String getEmail() {
+    return email;
   }
 
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
 
@@ -139,25 +139,25 @@ public class UserResponse {
   }
 
 
-  public UserResponse email(String email) {
+  public UserResponse lastName(String lastName) {
     
-    this.email = email;
+    this.lastName = lastName;
     return this;
   }
 
    /**
-   * Get email
-   * @return email
+   * Get lastName
+   * @return lastName
   **/
   @javax.annotation.Nullable
 
-  public String getEmail() {
-    return email;
+  public String getLastName() {
+    return lastName;
   }
 
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
 
@@ -172,14 +172,14 @@ public class UserResponse {
     UserResponse userResponse = (UserResponse) o;
     return Objects.equals(this.firstName, userResponse.firstName) &&
         Objects.equals(this.id, userResponse.id) &&
-        Objects.equals(this.lastName, userResponse.lastName) &&
+        Objects.equals(this.email, userResponse.email) &&
         Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled) &&
-        Objects.equals(this.email, userResponse.email);
+        Objects.equals(this.lastName, userResponse.lastName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, id, lastName, twoFactorEnabled, email);
+    return Objects.hash(firstName, id, email, twoFactorEnabled, lastName);
   }
 
   @Override
@@ -188,9 +188,9 @@ public class UserResponse {
     sb.append("class UserResponse {\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
-    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
+    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
