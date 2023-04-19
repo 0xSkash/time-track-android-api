@@ -11,6 +11,7 @@ import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
 import com.skash.timetrack.api.network.model.ClientTokenResponse;
+import com.skash.timetrack.api.network.model.Device;
 import com.skash.timetrack.api.network.model.UserResponse;
 
 import java.util.ArrayList;
@@ -25,11 +26,15 @@ public interface AuthApi {
    * Endpoint for User authentication
    * @param authorization Basic Auth (required)
    * @param xAuth2FA 6 digit 2FA Code (optional)
+   * @param device  (optional)
    * @return Observable&lt;ClientTokenResponse&gt;
    */
+  @Headers({
+    "Content-Type:application/json"
+  })
   @POST("auth/login")
   Observable<ClientTokenResponse> authLoginPost(
-    @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Header("X-Auth-2FA") Integer xAuth2FA
+    @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Header("X-Auth-2FA") Integer xAuth2FA, @retrofit2.http.Body Device device
   );
 
   /**
