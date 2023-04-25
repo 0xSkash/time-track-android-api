@@ -10,6 +10,7 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
+import com.skash.timetrack.api.network.model.AvatarResponse;
 import java.io.File;
 import com.skash.timetrack.api.network.model.UserInput;
 import com.skash.timetrack.api.network.model.UserResponse;
@@ -25,11 +26,11 @@ public interface UserApi {
    * Updates avatar of authenticated user
    * Endpoint for updating avatar of authenticated users
    * @param avatar  (optional)
-   * @return Completable
+   * @return Observable&lt;AvatarResponse&gt;
    */
   @retrofit2.http.Multipart
   @POST("users/me/avatar")
-  Completable usersMeAvatarPost(
+  Observable<AvatarResponse> usersMeAvatarPost(
     @retrofit2.http.Part MultipartBody.Part avatar
   );
 

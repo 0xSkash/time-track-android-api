@@ -21,65 +21,38 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.UUID;
 
 /**
- * ClientTokenResponse
+ * AvatarResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T17:03:54.534623+02:00[Europe/Berlin]")
-public class ClientTokenResponse {
-  public static final String SERIALIZED_NAME_TOKEN = "token";
-  @SerializedName(SERIALIZED_NAME_TOKEN)
-  private String token;
+public class AvatarResponse {
+  public static final String SERIALIZED_NAME_AVATAR_NAME = "avatarName";
+  @SerializedName(SERIALIZED_NAME_AVATAR_NAME)
+  private String avatarName;
 
-  public static final String SERIALIZED_NAME_USER_ID = "userId";
-  @SerializedName(SERIALIZED_NAME_USER_ID)
-  private UUID userId;
-
-  public ClientTokenResponse() {
+  public AvatarResponse() {
   }
 
-  public ClientTokenResponse token(String token) {
+  public AvatarResponse avatarName(String avatarName) {
     
-    this.token = token;
+    this.avatarName = avatarName;
     return this;
   }
 
    /**
-   * Get token
-   * @return token
+   * Get avatarName
+   * @return avatarName
   **/
   @javax.annotation.Nullable
 
-  public String getToken() {
-    return token;
+  public String getAvatarName() {
+    return avatarName;
   }
 
 
-  public void setToken(String token) {
-    this.token = token;
-  }
-
-
-  public ClientTokenResponse userId(UUID userId) {
-    
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @javax.annotation.Nullable
-
-  public UUID getUserId() {
-    return userId;
-  }
-
-
-  public void setUserId(UUID userId) {
-    this.userId = userId;
+  public void setAvatarName(String avatarName) {
+    this.avatarName = avatarName;
   }
 
 
@@ -91,22 +64,20 @@ public class ClientTokenResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClientTokenResponse clientTokenResponse = (ClientTokenResponse) o;
-    return Objects.equals(this.token, clientTokenResponse.token) &&
-        Objects.equals(this.userId, clientTokenResponse.userId);
+    AvatarResponse avatarResponse = (AvatarResponse) o;
+    return Objects.equals(this.avatarName, avatarResponse.avatarName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token, userId);
+    return Objects.hash(avatarName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClientTokenResponse {\n");
-    sb.append("    token: ").append(toIndentedString(token)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("class AvatarResponse {\n");
+    sb.append("    avatarName: ").append(toIndentedString(avatarName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

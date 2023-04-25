@@ -26,54 +26,54 @@ import java.util.UUID;
 /**
  * UserResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T16:43:56.282064+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T17:03:54.534623+02:00[Europe/Berlin]")
 public class UserResponse {
-  public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
-  @SerializedName(SERIALIZED_NAME_FIRST_NAME)
-  private String firstName;
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_AVATAR_PATH = "avatarPath";
-  @SerializedName(SERIALIZED_NAME_AVATAR_PATH)
-  private String avatarPath;
+  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  private String lastName;
 
   public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
   @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
   private Boolean twoFactorEnabled;
 
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
+  public static final String SERIALIZED_NAME_AVATAR_PATH = "avatarPath";
+  @SerializedName(SERIALIZED_NAME_AVATAR_PATH)
+  private String avatarPath;
 
-  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
-  @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
+  public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
+  @SerializedName(SERIALIZED_NAME_FIRST_NAME)
+  private String firstName;
 
   public UserResponse() {
   }
 
-  public UserResponse firstName(String firstName) {
+  public UserResponse email(String email) {
     
-    this.firstName = firstName;
+    this.email = email;
     return this;
   }
 
    /**
-   * Get firstName
-   * @return firstName
+   * Get email
+   * @return email
   **/
   @javax.annotation.Nullable
 
-  public String getFirstName() {
-    return firstName;
+  public String getEmail() {
+    return email;
   }
 
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
 
@@ -99,25 +99,25 @@ public class UserResponse {
   }
 
 
-  public UserResponse avatarPath(String avatarPath) {
+  public UserResponse lastName(String lastName) {
     
-    this.avatarPath = avatarPath;
+    this.lastName = lastName;
     return this;
   }
 
    /**
-   * Get avatarPath
-   * @return avatarPath
+   * Get lastName
+   * @return lastName
   **/
   @javax.annotation.Nullable
 
-  public String getAvatarPath() {
-    return avatarPath;
+  public String getLastName() {
+    return lastName;
   }
 
 
-  public void setAvatarPath(String avatarPath) {
-    this.avatarPath = avatarPath;
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
 
@@ -143,47 +143,47 @@ public class UserResponse {
   }
 
 
-  public UserResponse email(String email) {
+  public UserResponse avatarPath(String avatarPath) {
     
-    this.email = email;
+    this.avatarPath = avatarPath;
     return this;
   }
 
    /**
-   * Get email
-   * @return email
+   * Get avatarPath
+   * @return avatarPath
   **/
   @javax.annotation.Nullable
 
-  public String getEmail() {
-    return email;
+  public String getAvatarPath() {
+    return avatarPath;
   }
 
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setAvatarPath(String avatarPath) {
+    this.avatarPath = avatarPath;
   }
 
 
-  public UserResponse lastName(String lastName) {
+  public UserResponse firstName(String firstName) {
     
-    this.lastName = lastName;
+    this.firstName = firstName;
     return this;
   }
 
    /**
-   * Get lastName
-   * @return lastName
+   * Get firstName
+   * @return firstName
   **/
   @javax.annotation.Nullable
 
-  public String getLastName() {
-    return lastName;
+  public String getFirstName() {
+    return firstName;
   }
 
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
   }
 
 
@@ -196,29 +196,29 @@ public class UserResponse {
       return false;
     }
     UserResponse userResponse = (UserResponse) o;
-    return Objects.equals(this.firstName, userResponse.firstName) &&
+    return Objects.equals(this.email, userResponse.email) &&
         Objects.equals(this.id, userResponse.id) &&
-        Objects.equals(this.avatarPath, userResponse.avatarPath) &&
+        Objects.equals(this.lastName, userResponse.lastName) &&
         Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled) &&
-        Objects.equals(this.email, userResponse.email) &&
-        Objects.equals(this.lastName, userResponse.lastName);
+        Objects.equals(this.avatarPath, userResponse.avatarPath) &&
+        Objects.equals(this.firstName, userResponse.firstName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, id, avatarPath, twoFactorEnabled, email, lastName);
+    return Objects.hash(email, id, lastName, twoFactorEnabled, avatarPath, firstName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserResponse {\n");
-    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    avatarPath: ").append(toIndentedString(avatarPath)).append("\n");
-    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
+    sb.append("    avatarPath: ").append(toIndentedString(avatarPath)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
