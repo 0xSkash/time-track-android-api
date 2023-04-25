@@ -25,13 +25,14 @@ public interface UserApi {
   /**
    * Updates avatar of authenticated user
    * Endpoint for updating avatar of authenticated users
+   * @param authorization Bearer Token used to authenticate user (required)
    * @param avatar  (optional)
    * @return Observable&lt;AvatarResponse&gt;
    */
   @retrofit2.http.Multipart
   @POST("users/me/avatar")
   Observable<AvatarResponse> usersMeAvatarPost(
-    @retrofit2.http.Part MultipartBody.Part avatar
+    @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Part MultipartBody.Part avatar
   );
 
   /**
