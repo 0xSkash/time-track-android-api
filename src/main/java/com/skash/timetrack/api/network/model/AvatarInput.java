@@ -20,65 +20,40 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.skash.timetrack.api.network.model.AvatarInputFile;
 import java.io.IOException;
 
 /**
- * ClientResponse
+ * AvatarInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T16:43:56.282064+02:00[Europe/Berlin]")
-public class ClientResponse {
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
-  private String title;
+public class AvatarInput {
+  public static final String SERIALIZED_NAME_FILE = "file";
+  @SerializedName(SERIALIZED_NAME_FILE)
+  private AvatarInputFile _file;
 
-  public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
-  @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
-  private Boolean isBillable;
-
-  public ClientResponse() {
+  public AvatarInput() {
   }
 
-  public ClientResponse title(String title) {
+  public AvatarInput _file(AvatarInputFile _file) {
     
-    this.title = title;
+    this._file = _file;
     return this;
   }
 
    /**
-   * Get title
-   * @return title
+   * Get _file
+   * @return _file
   **/
   @javax.annotation.Nullable
 
-  public String getTitle() {
-    return title;
+  public AvatarInputFile getFile() {
+    return _file;
   }
 
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-
-  public ClientResponse isBillable(Boolean isBillable) {
-    
-    this.isBillable = isBillable;
-    return this;
-  }
-
-   /**
-   * Get isBillable
-   * @return isBillable
-  **/
-  @javax.annotation.Nullable
-
-  public Boolean getIsBillable() {
-    return isBillable;
-  }
-
-
-  public void setIsBillable(Boolean isBillable) {
-    this.isBillable = isBillable;
+  public void setFile(AvatarInputFile _file) {
+    this._file = _file;
   }
 
 
@@ -90,22 +65,20 @@ public class ClientResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClientResponse clientResponse = (ClientResponse) o;
-    return Objects.equals(this.title, clientResponse.title) &&
-        Objects.equals(this.isBillable, clientResponse.isBillable);
+    AvatarInput avatarInput = (AvatarInput) o;
+    return Objects.equals(this._file, avatarInput._file);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, isBillable);
+    return Objects.hash(_file);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClientResponse {\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
+    sb.append("class AvatarInput {\n");
+    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("}");
     return sb.toString();
   }
