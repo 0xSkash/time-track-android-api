@@ -26,7 +26,7 @@ import java.util.UUID;
 /**
  * ClientTokenResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:12:32.347105+02:00[Europe/Berlin]")
 public class ClientTokenResponse {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)

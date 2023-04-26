@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * AvatarResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:12:32.347105+02:00[Europe/Berlin]")
 public class AvatarResponse {
   public static final String SERIALIZED_NAME_AVATAR_NAME = "avatarName";
   @SerializedName(SERIALIZED_NAME_AVATAR_NAME)

@@ -21,24 +21,29 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
- * ClientResponse
+ * WorkspaceResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:12:32.347105+02:00[Europe/Berlin]")
-public class ClientResponse {
+public class WorkspaceResponse {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
   private String title;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
 
   public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
   @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
   private Boolean isBillable;
 
-  public ClientResponse() {
+  public WorkspaceResponse() {
   }
 
-  public ClientResponse title(String title) {
+  public WorkspaceResponse title(String title) {
     
     this.title = title;
     return this;
@@ -60,7 +65,29 @@ public class ClientResponse {
   }
 
 
-  public ClientResponse isBillable(Boolean isBillable) {
+  public WorkspaceResponse id(UUID id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getId() {
+    return id;
+  }
+
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+
+  public WorkspaceResponse isBillable(Boolean isBillable) {
     
     this.isBillable = isBillable;
     return this;
@@ -90,21 +117,23 @@ public class ClientResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClientResponse clientResponse = (ClientResponse) o;
-    return Objects.equals(this.title, clientResponse.title) &&
-        Objects.equals(this.isBillable, clientResponse.isBillable);
+    WorkspaceResponse workspaceResponse = (WorkspaceResponse) o;
+    return Objects.equals(this.title, workspaceResponse.title) &&
+        Objects.equals(this.id, workspaceResponse.id) &&
+        Objects.equals(this.isBillable, workspaceResponse.isBillable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, isBillable);
+    return Objects.hash(title, id, isBillable);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClientResponse {\n");
+    sb.append("class WorkspaceResponse {\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
     sb.append("}");
     return sb.toString();
