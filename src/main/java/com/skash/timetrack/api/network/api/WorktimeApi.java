@@ -30,7 +30,7 @@ public interface WorktimeApi {
   @Headers({
     "Content-Type:application/json"
   })
-  @POST("worktime")
+  @POST("worktime/")
   Observable<WorktimeResponse> worktimePost(
     @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Body CreateWorktimeInput createWorktimeInput
   );

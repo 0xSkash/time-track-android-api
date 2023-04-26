@@ -22,12 +22,21 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * WorktimeResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T15:30:45.198318+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T15:36:10.465483+02:00[Europe/Berlin]")
 public class WorktimeResponse {
+  public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
+  @SerializedName(SERIALIZED_NAME_STARTED_AT)
+  private Date startedAt;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
+
   public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
   @SerializedName(SERIALIZED_NAME_ENDED_AT)
   private Date endedAt;
@@ -36,12 +45,52 @@ public class WorktimeResponse {
   @SerializedName(SERIALIZED_NAME_DURATION)
   private Integer duration;
 
-  public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
-  @SerializedName(SERIALIZED_NAME_STARTED_AT)
-  private Date startedAt;
-
   public WorktimeResponse() {
   }
+
+  public WorktimeResponse startedAt(Date startedAt) {
+    
+    this.startedAt = startedAt;
+    return this;
+  }
+
+   /**
+   * Get startedAt
+   * @return startedAt
+  **/
+  @javax.annotation.Nullable
+
+  public Date getStartedAt() {
+    return startedAt;
+  }
+
+
+  public void setStartedAt(Date startedAt) {
+    this.startedAt = startedAt;
+  }
+
+
+  public WorktimeResponse id(UUID id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getId() {
+    return id;
+  }
+
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
 
   public WorktimeResponse endedAt(Date endedAt) {
     
@@ -87,28 +136,6 @@ public class WorktimeResponse {
   }
 
 
-  public WorktimeResponse startedAt(Date startedAt) {
-    
-    this.startedAt = startedAt;
-    return this;
-  }
-
-   /**
-   * Get startedAt
-   * @return startedAt
-  **/
-  @javax.annotation.Nullable
-
-  public Date getStartedAt() {
-    return startedAt;
-  }
-
-
-  public void setStartedAt(Date startedAt) {
-    this.startedAt = startedAt;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,23 +145,25 @@ public class WorktimeResponse {
       return false;
     }
     WorktimeResponse worktimeResponse = (WorktimeResponse) o;
-    return Objects.equals(this.endedAt, worktimeResponse.endedAt) &&
-        Objects.equals(this.duration, worktimeResponse.duration) &&
-        Objects.equals(this.startedAt, worktimeResponse.startedAt);
+    return Objects.equals(this.startedAt, worktimeResponse.startedAt) &&
+        Objects.equals(this.id, worktimeResponse.id) &&
+        Objects.equals(this.endedAt, worktimeResponse.endedAt) &&
+        Objects.equals(this.duration, worktimeResponse.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(endedAt, duration, startedAt);
+    return Objects.hash(startedAt, id, endedAt, duration);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorktimeResponse {\n");
+    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
-    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }
