@@ -15,6 +15,7 @@ import java.io.File;
 import com.skash.timetrack.api.network.model.OrganizationResponse;
 import com.skash.timetrack.api.network.model.UserInput;
 import com.skash.timetrack.api.network.model.UserResponse;
+import com.skash.timetrack.api.network.model.WorktimeResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +56,17 @@ public interface UserApi {
    */
   @GET("users/me/organizations")
   Observable<List<OrganizationResponse>> usersMeOrganizationsGet(
+    @retrofit2.http.Header("Authorization") String authorization
+  );
+
+  /**
+   * Returns worktimes of the authenticated user in specified.
+   * Endpoint for fetching of users worktimes
+   * @param authorization Bearer Token used to authenticate user (required)
+   * @return Observable&lt;List&lt;WorktimeResponse&gt;&gt;
+   */
+  @GET("users/me/worktime")
+  Observable<List<WorktimeResponse>> usersMeWorktimeGet(
     @retrofit2.http.Header("Authorization") String authorization
   );
 

@@ -25,15 +25,15 @@ import java.io.IOException;
 /**
  * UserInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:19:40.134526+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T15:30:45.198318+02:00[Europe/Berlin]")
 public class UserInput {
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
-
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
   private String firstName;
+
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
 
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
@@ -45,28 +45,6 @@ public class UserInput {
 
   public UserInput() {
   }
-
-  public UserInput email(String email) {
-    
-    this.email = email;
-    return this;
-  }
-
-   /**
-   * Get email
-   * @return email
-  **/
-  @javax.annotation.Nullable
-
-  public String getEmail() {
-    return email;
-  }
-
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
 
   public UserInput firstName(String firstName) {
     
@@ -87,6 +65,28 @@ public class UserInput {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+
+  public UserInput email(String email) {
+    
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * Get email
+   * @return email
+  **/
+  @javax.annotation.Nullable
+
+  public String getEmail() {
+    return email;
+  }
+
+
+  public void setEmail(String email) {
+    this.email = email;
   }
 
 
@@ -143,23 +143,23 @@ public class UserInput {
       return false;
     }
     UserInput userInput = (UserInput) o;
-    return Objects.equals(this.email, userInput.email) &&
-        Objects.equals(this.firstName, userInput.firstName) &&
+    return Objects.equals(this.firstName, userInput.firstName) &&
+        Objects.equals(this.email, userInput.email) &&
         Objects.equals(this.lastName, userInput.lastName) &&
         Objects.equals(this.password, userInput.password);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, firstName, lastName, password);
+    return Objects.hash(firstName, email, lastName, password);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInput {\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("}");
