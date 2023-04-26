@@ -25,15 +25,15 @@ import java.io.IOException;
 /**
  * UserInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T17:34:29.641813+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
 public class UserInput {
-  public static final String SERIALIZED_NAME_PASSWORD = "password";
-  @SerializedName(SERIALIZED_NAME_PASSWORD)
-  private String password;
-
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
   private String firstName;
+
+  public static final String SERIALIZED_NAME_PASSWORD = "password";
+  @SerializedName(SERIALIZED_NAME_PASSWORD)
+  private String password;
 
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
@@ -45,28 +45,6 @@ public class UserInput {
 
   public UserInput() {
   }
-
-  public UserInput password(String password) {
-    
-    this.password = password;
-    return this;
-  }
-
-   /**
-   * Get password
-   * @return password
-  **/
-  @javax.annotation.Nullable
-
-  public String getPassword() {
-    return password;
-  }
-
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
 
   public UserInput firstName(String firstName) {
     
@@ -87,6 +65,28 @@ public class UserInput {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+
+  public UserInput password(String password) {
+    
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * Get password
+   * @return password
+  **/
+  @javax.annotation.Nullable
+
+  public String getPassword() {
+    return password;
+  }
+
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
 
@@ -143,23 +143,23 @@ public class UserInput {
       return false;
     }
     UserInput userInput = (UserInput) o;
-    return Objects.equals(this.password, userInput.password) &&
-        Objects.equals(this.firstName, userInput.firstName) &&
+    return Objects.equals(this.firstName, userInput.firstName) &&
+        Objects.equals(this.password, userInput.password) &&
         Objects.equals(this.lastName, userInput.lastName) &&
         Objects.equals(this.email, userInput.email);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(password, firstName, lastName, email);
+    return Objects.hash(firstName, password, lastName, email);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInput {\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");

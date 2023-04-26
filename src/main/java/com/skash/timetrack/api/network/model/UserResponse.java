@@ -26,15 +26,19 @@ import java.util.UUID;
 /**
  * UserResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T17:34:29.641813+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
 
-  public static final String SERIALIZED_NAME_AVATAR_PATH = "avatarPath";
-  @SerializedName(SERIALIZED_NAME_AVATAR_PATH)
-  private String avatarPath;
+  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  private String lastName;
+
+  public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
+  @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
+  private Boolean twoFactorEnabled;
 
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
@@ -44,13 +48,9 @@ public class UserResponse {
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
-  @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
-
-  public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
-  @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
-  private Boolean twoFactorEnabled;
+  public static final String SERIALIZED_NAME_AVATAR_PATH = "avatarPath";
+  @SerializedName(SERIALIZED_NAME_AVATAR_PATH)
+  private String avatarPath;
 
   public UserResponse() {
   }
@@ -74,72 +74,6 @@ public class UserResponse {
 
   public void setEmail(String email) {
     this.email = email;
-  }
-
-
-  public UserResponse avatarPath(String avatarPath) {
-    
-    this.avatarPath = avatarPath;
-    return this;
-  }
-
-   /**
-   * Get avatarPath
-   * @return avatarPath
-  **/
-  @javax.annotation.Nullable
-
-  public String getAvatarPath() {
-    return avatarPath;
-  }
-
-
-  public void setAvatarPath(String avatarPath) {
-    this.avatarPath = avatarPath;
-  }
-
-
-  public UserResponse firstName(String firstName) {
-    
-    this.firstName = firstName;
-    return this;
-  }
-
-   /**
-   * Get firstName
-   * @return firstName
-  **/
-  @javax.annotation.Nullable
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-
-  public UserResponse id(UUID id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nullable
-
-  public UUID getId() {
-    return id;
-  }
-
-
-  public void setId(UUID id) {
-    this.id = id;
   }
 
 
@@ -187,6 +121,72 @@ public class UserResponse {
   }
 
 
+  public UserResponse firstName(String firstName) {
+    
+    this.firstName = firstName;
+    return this;
+  }
+
+   /**
+   * Get firstName
+   * @return firstName
+  **/
+  @javax.annotation.Nullable
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+
+  public UserResponse id(UUID id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getId() {
+    return id;
+  }
+
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+
+  public UserResponse avatarPath(String avatarPath) {
+    
+    this.avatarPath = avatarPath;
+    return this;
+  }
+
+   /**
+   * Get avatarPath
+   * @return avatarPath
+  **/
+  @javax.annotation.Nullable
+
+  public String getAvatarPath() {
+    return avatarPath;
+  }
+
+
+  public void setAvatarPath(String avatarPath) {
+    this.avatarPath = avatarPath;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -197,16 +197,16 @@ public class UserResponse {
     }
     UserResponse userResponse = (UserResponse) o;
     return Objects.equals(this.email, userResponse.email) &&
-        Objects.equals(this.avatarPath, userResponse.avatarPath) &&
+        Objects.equals(this.lastName, userResponse.lastName) &&
+        Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled) &&
         Objects.equals(this.firstName, userResponse.firstName) &&
         Objects.equals(this.id, userResponse.id) &&
-        Objects.equals(this.lastName, userResponse.lastName) &&
-        Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled);
+        Objects.equals(this.avatarPath, userResponse.avatarPath);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, avatarPath, firstName, id, lastName, twoFactorEnabled);
+    return Objects.hash(email, lastName, twoFactorEnabled, firstName, id, avatarPath);
   }
 
   @Override
@@ -214,11 +214,11 @@ public class UserResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserResponse {\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    avatarPath: ").append(toIndentedString(avatarPath)).append("\n");
-    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    avatarPath: ").append(toIndentedString(avatarPath)).append("\n");
     sb.append("}");
     return sb.toString();
   }

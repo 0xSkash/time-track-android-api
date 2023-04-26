@@ -25,19 +25,19 @@ import java.io.IOException;
 /**
  * Device
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-25T17:34:29.641813+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
 public class Device {
   public static final String SERIALIZED_NAME_MANUFACTURER = "manufacturer";
   @SerializedName(SERIALIZED_NAME_MANUFACTURER)
   private String manufacturer;
 
-  public static final String SERIALIZED_NAME_OS_VERSION = "osVersion";
-  @SerializedName(SERIALIZED_NAME_OS_VERSION)
-  private String osVersion;
-
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
   private String model;
+
+  public static final String SERIALIZED_NAME_OS_VERSION = "osVersion";
+  @SerializedName(SERIALIZED_NAME_OS_VERSION)
+  private String osVersion;
 
   public static final String SERIALIZED_NAME_PUSH_TOKEN = "pushToken";
   @SerializedName(SERIALIZED_NAME_PUSH_TOKEN)
@@ -68,28 +68,6 @@ public class Device {
   }
 
 
-  public Device osVersion(String osVersion) {
-    
-    this.osVersion = osVersion;
-    return this;
-  }
-
-   /**
-   * Get osVersion
-   * @return osVersion
-  **/
-  @javax.annotation.Nullable
-
-  public String getOsVersion() {
-    return osVersion;
-  }
-
-
-  public void setOsVersion(String osVersion) {
-    this.osVersion = osVersion;
-  }
-
-
   public Device model(String model) {
     
     this.model = model;
@@ -109,6 +87,28 @@ public class Device {
 
   public void setModel(String model) {
     this.model = model;
+  }
+
+
+  public Device osVersion(String osVersion) {
+    
+    this.osVersion = osVersion;
+    return this;
+  }
+
+   /**
+   * Get osVersion
+   * @return osVersion
+  **/
+  @javax.annotation.Nullable
+
+  public String getOsVersion() {
+    return osVersion;
+  }
+
+
+  public void setOsVersion(String osVersion) {
+    this.osVersion = osVersion;
   }
 
 
@@ -144,14 +144,14 @@ public class Device {
     }
     Device device = (Device) o;
     return Objects.equals(this.manufacturer, device.manufacturer) &&
-        Objects.equals(this.osVersion, device.osVersion) &&
         Objects.equals(this.model, device.model) &&
+        Objects.equals(this.osVersion, device.osVersion) &&
         Objects.equals(this.pushToken, device.pushToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(manufacturer, osVersion, model, pushToken);
+    return Objects.hash(manufacturer, model, osVersion, pushToken);
   }
 
   @Override
@@ -159,8 +159,8 @@ public class Device {
     StringBuilder sb = new StringBuilder();
     sb.append("class Device {\n");
     sb.append("    manufacturer: ").append(toIndentedString(manufacturer)).append("\n");
-    sb.append("    osVersion: ").append(toIndentedString(osVersion)).append("\n");
     sb.append("    model: ").append(toIndentedString(model)).append("\n");
+    sb.append("    osVersion: ").append(toIndentedString(osVersion)).append("\n");
     sb.append("    pushToken: ").append(toIndentedString(pushToken)).append("\n");
     sb.append("}");
     return sb.toString();

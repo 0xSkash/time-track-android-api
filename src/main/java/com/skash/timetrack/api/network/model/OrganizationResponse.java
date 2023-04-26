@@ -21,38 +21,65 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
- * AvatarInputFile
+ * OrganizationResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T13:53:06.193663+02:00[Europe/Berlin]")
-public class AvatarInputFile {
-  public static final String SERIALIZED_NAME_FILENAME = "filename";
-  @SerializedName(SERIALIZED_NAME_FILENAME)
-  private String filename;
+public class OrganizationResponse {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
 
-  public AvatarInputFile() {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+  public OrganizationResponse() {
   }
 
-  public AvatarInputFile filename(String filename) {
+  public OrganizationResponse id(UUID id) {
     
-    this.filename = filename;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get filename
-   * @return filename
+   * Get id
+   * @return id
   **/
   @javax.annotation.Nullable
 
-  public String getFilename() {
-    return filename;
+  public UUID getId() {
+    return id;
   }
 
 
-  public void setFilename(String filename) {
-    this.filename = filename;
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+
+  public OrganizationResponse name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -64,20 +91,22 @@ public class AvatarInputFile {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AvatarInputFile avatarInputFile = (AvatarInputFile) o;
-    return Objects.equals(this.filename, avatarInputFile.filename);
+    OrganizationResponse organizationResponse = (OrganizationResponse) o;
+    return Objects.equals(this.id, organizationResponse.id) &&
+        Objects.equals(this.name, organizationResponse.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(filename);
+    return Objects.hash(id, name);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AvatarInputFile {\n");
-    sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
+    sb.append("class OrganizationResponse {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
