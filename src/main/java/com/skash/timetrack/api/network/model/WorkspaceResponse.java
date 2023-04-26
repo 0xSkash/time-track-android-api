@@ -26,44 +26,26 @@ import java.util.UUID;
 /**
  * WorkspaceResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:12:32.347105+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T14:19:40.134526+02:00[Europe/Berlin]")
 public class WorkspaceResponse {
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
-  private String title;
-
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
+
+  public static final String SERIALIZED_NAME_TITLE = "title";
+  @SerializedName(SERIALIZED_NAME_TITLE)
+  private String title;
 
   public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
   @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
   private Boolean isBillable;
 
+  public static final String SERIALIZED_NAME_ORGANIZTION_ID = "organiztionId";
+  @SerializedName(SERIALIZED_NAME_ORGANIZTION_ID)
+  private UUID organiztionId;
+
   public WorkspaceResponse() {
   }
-
-  public WorkspaceResponse title(String title) {
-    
-    this.title = title;
-    return this;
-  }
-
-   /**
-   * Get title
-   * @return title
-  **/
-  @javax.annotation.Nullable
-
-  public String getTitle() {
-    return title;
-  }
-
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
 
   public WorkspaceResponse id(UUID id) {
     
@@ -84,6 +66,28 @@ public class WorkspaceResponse {
 
   public void setId(UUID id) {
     this.id = id;
+  }
+
+
+  public WorkspaceResponse title(String title) {
+    
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * Get title
+   * @return title
+  **/
+  @javax.annotation.Nullable
+
+  public String getTitle() {
+    return title;
+  }
+
+
+  public void setTitle(String title) {
+    this.title = title;
   }
 
 
@@ -109,6 +113,28 @@ public class WorkspaceResponse {
   }
 
 
+  public WorkspaceResponse organiztionId(UUID organiztionId) {
+    
+    this.organiztionId = organiztionId;
+    return this;
+  }
+
+   /**
+   * Get organiztionId
+   * @return organiztionId
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getOrganiztionId() {
+    return organiztionId;
+  }
+
+
+  public void setOrganiztionId(UUID organiztionId) {
+    this.organiztionId = organiztionId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,23 +144,25 @@ public class WorkspaceResponse {
       return false;
     }
     WorkspaceResponse workspaceResponse = (WorkspaceResponse) o;
-    return Objects.equals(this.title, workspaceResponse.title) &&
-        Objects.equals(this.id, workspaceResponse.id) &&
-        Objects.equals(this.isBillable, workspaceResponse.isBillable);
+    return Objects.equals(this.id, workspaceResponse.id) &&
+        Objects.equals(this.title, workspaceResponse.title) &&
+        Objects.equals(this.isBillable, workspaceResponse.isBillable) &&
+        Objects.equals(this.organiztionId, workspaceResponse.organiztionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, id, isBillable);
+    return Objects.hash(id, title, isBillable, organiztionId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceResponse {\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
+    sb.append("    organiztionId: ").append(toIndentedString(organiztionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
