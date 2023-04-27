@@ -24,62 +24,36 @@ import java.io.IOException;
 import java.util.UUID;
 
 /**
- * ClientTokenResponse
+ * SelectedWorkspaceInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:16:47.057315+02:00[Europe/Berlin]")
-public class ClientTokenResponse {
-  public static final String SERIALIZED_NAME_TOKEN = "token";
-  @SerializedName(SERIALIZED_NAME_TOKEN)
-  private String token;
+public class SelectedWorkspaceInput {
+  public static final String SERIALIZED_NAME_WORKSPACE_ID = "workspaceId";
+  @SerializedName(SERIALIZED_NAME_WORKSPACE_ID)
+  private UUID workspaceId;
 
-  public static final String SERIALIZED_NAME_USER_ID = "userId";
-  @SerializedName(SERIALIZED_NAME_USER_ID)
-  private UUID userId;
-
-  public ClientTokenResponse() {
+  public SelectedWorkspaceInput() {
   }
 
-  public ClientTokenResponse token(String token) {
+  public SelectedWorkspaceInput workspaceId(UUID workspaceId) {
     
-    this.token = token;
+    this.workspaceId = workspaceId;
     return this;
   }
 
    /**
-   * Get token
-   * @return token
+   * Get workspaceId
+   * @return workspaceId
   **/
   @javax.annotation.Nullable
 
-  public String getToken() {
-    return token;
+  public UUID getWorkspaceId() {
+    return workspaceId;
   }
 
 
-  public void setToken(String token) {
-    this.token = token;
-  }
-
-
-  public ClientTokenResponse userId(UUID userId) {
-    
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @javax.annotation.Nullable
-
-  public UUID getUserId() {
-    return userId;
-  }
-
-
-  public void setUserId(UUID userId) {
-    this.userId = userId;
+  public void setWorkspaceId(UUID workspaceId) {
+    this.workspaceId = workspaceId;
   }
 
 
@@ -91,22 +65,20 @@ public class ClientTokenResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClientTokenResponse clientTokenResponse = (ClientTokenResponse) o;
-    return Objects.equals(this.token, clientTokenResponse.token) &&
-        Objects.equals(this.userId, clientTokenResponse.userId);
+    SelectedWorkspaceInput selectedWorkspaceInput = (SelectedWorkspaceInput) o;
+    return Objects.equals(this.workspaceId, selectedWorkspaceInput.workspaceId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token, userId);
+    return Objects.hash(workspaceId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClientTokenResponse {\n");
-    sb.append("    token: ").append(toIndentedString(token)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("class SelectedWorkspaceInput {\n");
+    sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

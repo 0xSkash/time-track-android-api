@@ -13,6 +13,8 @@ import okhttp3.MultipartBody;
 import com.skash.timetrack.api.network.model.AvatarResponse;
 import java.io.File;
 import com.skash.timetrack.api.network.model.OrganizationResponse;
+import com.skash.timetrack.api.network.model.SelectedWorkspaceInput;
+import com.skash.timetrack.api.network.model.TaskResponse;
 import com.skash.timetrack.api.network.model.UserInput;
 import com.skash.timetrack.api.network.model.UserResponse;
 import com.skash.timetrack.api.network.model.WorktimeResponse;
@@ -56,6 +58,32 @@ public interface UserApi {
    */
   @GET("users/me/organizations")
   Observable<List<OrganizationResponse>> usersMeOrganizationsGet(
+    @retrofit2.http.Header("Authorization") String authorization
+  );
+
+  /**
+   * Updates selected workspace of authenticated user
+   * Endpoint for updating selected workspace of authenticated users
+   * @param authorization Bearer Token used to authenticate user (required)
+   * @param selectedWorkspaceInput  (optional)
+   * @return Observable&lt;UserResponse&gt;
+   */
+  @Headers({
+    "Content-Type:application/json"
+  })
+  @PUT("users/me/selected_workspace")
+  Observable<UserResponse> usersMeSelectedWorkspacePut(
+    @retrofit2.http.Header("Authorization") String authorization, @retrofit2.http.Body SelectedWorkspaceInput selectedWorkspaceInput
+  );
+
+  /**
+   * Returns tasks of the authenticated user.
+   * Endpoint for fetching of users tasks
+   * @param authorization Bearer Token used to authenticate user (required)
+   * @return Observable&lt;List&lt;TaskResponse&gt;&gt;
+   */
+  @GET("users/me/tasks")
+  Observable<List<TaskResponse>> usersMeTasksGet(
     @retrofit2.http.Header("Authorization") String authorization
   );
 

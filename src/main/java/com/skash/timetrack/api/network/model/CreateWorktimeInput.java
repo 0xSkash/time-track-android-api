@@ -26,7 +26,7 @@ import java.util.Date;
 /**
  * CreateWorktimeInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-26T15:36:10.465483+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:16:47.057315+02:00[Europe/Berlin]")
 public class CreateWorktimeInput {
   public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
   @SerializedName(SERIALIZED_NAME_ENDED_AT)

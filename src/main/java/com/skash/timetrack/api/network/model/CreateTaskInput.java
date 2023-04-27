@@ -25,30 +25,34 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * WorktimeResponse
+ * CreateTaskInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:16:47.057315+02:00[Europe/Berlin]")
-public class WorktimeResponse {
+public class CreateTaskInput {
   public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
   private Date startedAt;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private UUID id;
+  public static final String SERIALIZED_NAME_PROJECT = "project";
+  @SerializedName(SERIALIZED_NAME_PROJECT)
+  private UUID project;
 
   public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
   @SerializedName(SERIALIZED_NAME_ENDED_AT)
   private Date endedAt;
 
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
   public static final String SERIALIZED_NAME_DURATION = "duration";
   @SerializedName(SERIALIZED_NAME_DURATION)
   private Integer duration;
 
-  public WorktimeResponse() {
+  public CreateTaskInput() {
   }
 
-  public WorktimeResponse startedAt(Date startedAt) {
+  public CreateTaskInput startedAt(Date startedAt) {
     
     this.startedAt = startedAt;
     return this;
@@ -70,29 +74,29 @@ public class WorktimeResponse {
   }
 
 
-  public WorktimeResponse id(UUID id) {
+  public CreateTaskInput project(UUID project) {
     
-    this.id = id;
+    this.project = project;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get project
+   * @return project
   **/
   @javax.annotation.Nullable
 
-  public UUID getId() {
-    return id;
+  public UUID getProject() {
+    return project;
   }
 
 
-  public void setId(UUID id) {
-    this.id = id;
+  public void setProject(UUID project) {
+    this.project = project;
   }
 
 
-  public WorktimeResponse endedAt(Date endedAt) {
+  public CreateTaskInput endedAt(Date endedAt) {
     
     this.endedAt = endedAt;
     return this;
@@ -114,7 +118,29 @@ public class WorktimeResponse {
   }
 
 
-  public WorktimeResponse duration(Integer duration) {
+  public CreateTaskInput description(String description) {
+    
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @javax.annotation.Nullable
+
+  public String getDescription() {
+    return description;
+  }
+
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  public CreateTaskInput duration(Integer duration) {
     
     this.duration = duration;
     return this;
@@ -144,25 +170,27 @@ public class WorktimeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    WorktimeResponse worktimeResponse = (WorktimeResponse) o;
-    return Objects.equals(this.startedAt, worktimeResponse.startedAt) &&
-        Objects.equals(this.id, worktimeResponse.id) &&
-        Objects.equals(this.endedAt, worktimeResponse.endedAt) &&
-        Objects.equals(this.duration, worktimeResponse.duration);
+    CreateTaskInput createTaskInput = (CreateTaskInput) o;
+    return Objects.equals(this.startedAt, createTaskInput.startedAt) &&
+        Objects.equals(this.project, createTaskInput.project) &&
+        Objects.equals(this.endedAt, createTaskInput.endedAt) &&
+        Objects.equals(this.description, createTaskInput.description) &&
+        Objects.equals(this.duration, createTaskInput.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(startedAt, id, endedAt, duration);
+    return Objects.hash(startedAt, project, endedAt, description, duration);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class WorktimeResponse {\n");
+    sb.append("class CreateTaskInput {\n");
     sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    project: ").append(toIndentedString(project)).append("\n");
     sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("}");
     return sb.toString();

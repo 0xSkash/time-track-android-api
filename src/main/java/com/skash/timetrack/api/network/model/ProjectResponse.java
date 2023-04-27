@@ -20,25 +20,74 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.skash.timetrack.api.network.model.ClientResponse;
 import java.io.IOException;
 
 /**
- * ClientResponse
+ * ProjectResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:16:47.057315+02:00[Europe/Berlin]")
-public class ClientResponse {
+public class ProjectResponse {
+  public static final String SERIALIZED_NAME_COLOR = "color";
+  @SerializedName(SERIALIZED_NAME_COLOR)
+  private String color;
+
+  public static final String SERIALIZED_NAME_CLIENT = "client";
+  @SerializedName(SERIALIZED_NAME_CLIENT)
+  private ClientResponse client;
+
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
   private String title;
 
-  public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
-  @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
-  private Boolean isBillable;
-
-  public ClientResponse() {
+  public ProjectResponse() {
   }
 
-  public ClientResponse title(String title) {
+  public ProjectResponse color(String color) {
+    
+    this.color = color;
+    return this;
+  }
+
+   /**
+   * Get color
+   * @return color
+  **/
+  @javax.annotation.Nullable
+
+  public String getColor() {
+    return color;
+  }
+
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+
+  public ProjectResponse client(ClientResponse client) {
+    
+    this.client = client;
+    return this;
+  }
+
+   /**
+   * Get client
+   * @return client
+  **/
+  @javax.annotation.Nullable
+
+  public ClientResponse getClient() {
+    return client;
+  }
+
+
+  public void setClient(ClientResponse client) {
+    this.client = client;
+  }
+
+
+  public ProjectResponse title(String title) {
     
     this.title = title;
     return this;
@@ -60,28 +109,6 @@ public class ClientResponse {
   }
 
 
-  public ClientResponse isBillable(Boolean isBillable) {
-    
-    this.isBillable = isBillable;
-    return this;
-  }
-
-   /**
-   * Get isBillable
-   * @return isBillable
-  **/
-  @javax.annotation.Nullable
-
-  public Boolean getIsBillable() {
-    return isBillable;
-  }
-
-
-  public void setIsBillable(Boolean isBillable) {
-    this.isBillable = isBillable;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -90,22 +117,24 @@ public class ClientResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClientResponse clientResponse = (ClientResponse) o;
-    return Objects.equals(this.title, clientResponse.title) &&
-        Objects.equals(this.isBillable, clientResponse.isBillable);
+    ProjectResponse projectResponse = (ProjectResponse) o;
+    return Objects.equals(this.color, projectResponse.color) &&
+        Objects.equals(this.client, projectResponse.client) &&
+        Objects.equals(this.title, projectResponse.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, isBillable);
+    return Objects.hash(color, client, title);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClientResponse {\n");
+    sb.append("class ProjectResponse {\n");
+    sb.append("    color: ").append(toIndentedString(color)).append("\n");
+    sb.append("    client: ").append(toIndentedString(client)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
     sb.append("}");
     return sb.toString();
   }
