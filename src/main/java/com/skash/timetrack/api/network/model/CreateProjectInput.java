@@ -20,57 +20,30 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.skash.timetrack.api.network.model.ClientResponse;
 import java.io.IOException;
 import java.util.UUID;
 
 /**
- * ProjectResponse
+ * CreateProjectInput
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T16:29:15.381123+02:00[Europe/Berlin]")
-public class ProjectResponse {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private UUID id;
-
+public class CreateProjectInput {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
   private String title;
 
-  public static final String SERIALIZED_NAME_CLIENT = "client";
-  @SerializedName(SERIALIZED_NAME_CLIENT)
-  private ClientResponse client;
+  public static final String SERIALIZED_NAME_CLIENT_ID = "clientId";
+  @SerializedName(SERIALIZED_NAME_CLIENT_ID)
+  private UUID clientId;
 
   public static final String SERIALIZED_NAME_COLOR = "color";
   @SerializedName(SERIALIZED_NAME_COLOR)
   private String color;
 
-  public ProjectResponse() {
+  public CreateProjectInput() {
   }
 
-  public ProjectResponse id(UUID id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nullable
-
-  public UUID getId() {
-    return id;
-  }
-
-
-  public void setId(UUID id) {
-    this.id = id;
-  }
-
-
-  public ProjectResponse title(String title) {
+  public CreateProjectInput title(String title) {
     
     this.title = title;
     return this;
@@ -92,29 +65,29 @@ public class ProjectResponse {
   }
 
 
-  public ProjectResponse client(ClientResponse client) {
+  public CreateProjectInput clientId(UUID clientId) {
     
-    this.client = client;
+    this.clientId = clientId;
     return this;
   }
 
    /**
-   * Get client
-   * @return client
+   * Get clientId
+   * @return clientId
   **/
   @javax.annotation.Nullable
 
-  public ClientResponse getClient() {
-    return client;
+  public UUID getClientId() {
+    return clientId;
   }
 
 
-  public void setClient(ClientResponse client) {
-    this.client = client;
+  public void setClientId(UUID clientId) {
+    this.clientId = clientId;
   }
 
 
-  public ProjectResponse color(String color) {
+  public CreateProjectInput color(String color) {
     
     this.color = color;
     return this;
@@ -144,25 +117,23 @@ public class ProjectResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProjectResponse projectResponse = (ProjectResponse) o;
-    return Objects.equals(this.id, projectResponse.id) &&
-        Objects.equals(this.title, projectResponse.title) &&
-        Objects.equals(this.client, projectResponse.client) &&
-        Objects.equals(this.color, projectResponse.color);
+    CreateProjectInput createProjectInput = (CreateProjectInput) o;
+    return Objects.equals(this.title, createProjectInput.title) &&
+        Objects.equals(this.clientId, createProjectInput.clientId) &&
+        Objects.equals(this.color, createProjectInput.color);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, title, client, color);
+    return Objects.hash(title, clientId, color);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ProjectResponse {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("class CreateProjectInput {\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    client: ").append(toIndentedString(client)).append("\n");
+    sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    color: ").append(toIndentedString(color)).append("\n");
     sb.append("}");
     return sb.toString();

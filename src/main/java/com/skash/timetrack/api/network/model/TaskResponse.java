@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * TaskResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:34:35.654479+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T16:29:15.381123+02:00[Europe/Berlin]")
 public class TaskResponse {
   public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
@@ -42,13 +42,13 @@ public class TaskResponse {
   @SerializedName(SERIALIZED_NAME_PROJECT)
   private ProjectResponse project;
 
-  public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
-  @SerializedName(SERIALIZED_NAME_ENDED_AT)
-  private Date endedAt;
-
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
+
+  public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
+  @SerializedName(SERIALIZED_NAME_ENDED_AT)
+  private Date endedAt;
 
   public static final String SERIALIZED_NAME_DURATION = "duration";
   @SerializedName(SERIALIZED_NAME_DURATION)
@@ -123,28 +123,6 @@ public class TaskResponse {
   }
 
 
-  public TaskResponse endedAt(Date endedAt) {
-    
-    this.endedAt = endedAt;
-    return this;
-  }
-
-   /**
-   * Get endedAt
-   * @return endedAt
-  **/
-  @javax.annotation.Nullable
-
-  public Date getEndedAt() {
-    return endedAt;
-  }
-
-
-  public void setEndedAt(Date endedAt) {
-    this.endedAt = endedAt;
-  }
-
-
   public TaskResponse description(String description) {
     
     this.description = description;
@@ -164,6 +142,28 @@ public class TaskResponse {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+
+  public TaskResponse endedAt(Date endedAt) {
+    
+    this.endedAt = endedAt;
+    return this;
+  }
+
+   /**
+   * Get endedAt
+   * @return endedAt
+  **/
+  @javax.annotation.Nullable
+
+  public Date getEndedAt() {
+    return endedAt;
+  }
+
+
+  public void setEndedAt(Date endedAt) {
+    this.endedAt = endedAt;
   }
 
 
@@ -201,14 +201,14 @@ public class TaskResponse {
     return Objects.equals(this.startedAt, taskResponse.startedAt) &&
         Objects.equals(this.id, taskResponse.id) &&
         Objects.equals(this.project, taskResponse.project) &&
-        Objects.equals(this.endedAt, taskResponse.endedAt) &&
         Objects.equals(this.description, taskResponse.description) &&
+        Objects.equals(this.endedAt, taskResponse.endedAt) &&
         Objects.equals(this.duration, taskResponse.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(startedAt, id, project, endedAt, description, duration);
+    return Objects.hash(startedAt, id, project, description, endedAt, duration);
   }
 
   @Override
@@ -218,8 +218,8 @@ public class TaskResponse {
     sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    project: ").append(toIndentedString(project)).append("\n");
-    sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("}");
     return sb.toString();

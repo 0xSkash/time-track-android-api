@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * AvatarInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:34:35.654479+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T16:29:15.381123+02:00[Europe/Berlin]")
 public class AvatarInput {
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)
