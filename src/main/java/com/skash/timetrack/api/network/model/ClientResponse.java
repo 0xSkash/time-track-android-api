@@ -26,8 +26,12 @@ import java.util.UUID;
 /**
  * ClientResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:34:35.654479+02:00[Europe/Berlin]")
 public class ClientResponse {
+  public static final String SERIALIZED_NAME_TITLE = "title";
+  @SerializedName(SERIALIZED_NAME_TITLE)
+  private String title;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -36,12 +40,30 @@ public class ClientResponse {
   @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
   private Boolean isBillable;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
-  private String title;
-
   public ClientResponse() {
   }
+
+  public ClientResponse title(String title) {
+    
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * Get title
+   * @return title
+  **/
+  @javax.annotation.Nullable
+
+  public String getTitle() {
+    return title;
+  }
+
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
 
   public ClientResponse id(UUID id) {
     
@@ -87,28 +109,6 @@ public class ClientResponse {
   }
 
 
-  public ClientResponse title(String title) {
-    
-    this.title = title;
-    return this;
-  }
-
-   /**
-   * Get title
-   * @return title
-  **/
-  @javax.annotation.Nullable
-
-  public String getTitle() {
-    return title;
-  }
-
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,23 +118,23 @@ public class ClientResponse {
       return false;
     }
     ClientResponse clientResponse = (ClientResponse) o;
-    return Objects.equals(this.id, clientResponse.id) &&
-        Objects.equals(this.isBillable, clientResponse.isBillable) &&
-        Objects.equals(this.title, clientResponse.title);
+    return Objects.equals(this.title, clientResponse.title) &&
+        Objects.equals(this.id, clientResponse.id) &&
+        Objects.equals(this.isBillable, clientResponse.isBillable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, isBillable, title);
+    return Objects.hash(title, id, isBillable);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClientResponse {\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");
     return sb.toString();
   }

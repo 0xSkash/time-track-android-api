@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * UserInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:34:35.654479+02:00[Europe/Berlin]")
 public class UserInput {
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
@@ -35,13 +35,13 @@ public class UserInput {
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
 
-  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
-  @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
-
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
+
+  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  private String lastName;
 
   public UserInput() {
   }
@@ -90,28 +90,6 @@ public class UserInput {
   }
 
 
-  public UserInput lastName(String lastName) {
-    
-    this.lastName = lastName;
-    return this;
-  }
-
-   /**
-   * Get lastName
-   * @return lastName
-  **/
-  @javax.annotation.Nullable
-
-  public String getLastName() {
-    return lastName;
-  }
-
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
-
   public UserInput password(String password) {
     
     this.password = password;
@@ -134,6 +112,28 @@ public class UserInput {
   }
 
 
+  public UserInput lastName(String lastName) {
+    
+    this.lastName = lastName;
+    return this;
+  }
+
+   /**
+   * Get lastName
+   * @return lastName
+  **/
+  @javax.annotation.Nullable
+
+  public String getLastName() {
+    return lastName;
+  }
+
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -145,13 +145,13 @@ public class UserInput {
     UserInput userInput = (UserInput) o;
     return Objects.equals(this.firstName, userInput.firstName) &&
         Objects.equals(this.email, userInput.email) &&
-        Objects.equals(this.lastName, userInput.lastName) &&
-        Objects.equals(this.password, userInput.password);
+        Objects.equals(this.password, userInput.password) &&
+        Objects.equals(this.lastName, userInput.lastName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, email, lastName, password);
+    return Objects.hash(firstName, email, password, lastName);
   }
 
   @Override
@@ -160,8 +160,8 @@ public class UserInput {
     sb.append("class UserInput {\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

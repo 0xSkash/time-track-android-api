@@ -60,7 +60,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 def getVersionName = { ->
-    return "0.5.19"
+    return "0.5.20"
 }
 
 def getArtificatId = { ->
