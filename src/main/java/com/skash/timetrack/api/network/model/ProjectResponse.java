@@ -26,42 +26,42 @@ import java.io.IOException;
 /**
  * ProjectResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:16:47.057315+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:21:24.739627+02:00[Europe/Berlin]")
 public class ProjectResponse {
-  public static final String SERIALIZED_NAME_COLOR = "color";
-  @SerializedName(SERIALIZED_NAME_COLOR)
-  private String color;
+  public static final String SERIALIZED_NAME_TITLE = "title";
+  @SerializedName(SERIALIZED_NAME_TITLE)
+  private String title;
 
   public static final String SERIALIZED_NAME_CLIENT = "client";
   @SerializedName(SERIALIZED_NAME_CLIENT)
   private ClientResponse client;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
-  private String title;
+  public static final String SERIALIZED_NAME_COLOR = "color";
+  @SerializedName(SERIALIZED_NAME_COLOR)
+  private String color;
 
   public ProjectResponse() {
   }
 
-  public ProjectResponse color(String color) {
+  public ProjectResponse title(String title) {
     
-    this.color = color;
+    this.title = title;
     return this;
   }
 
    /**
-   * Get color
-   * @return color
+   * Get title
+   * @return title
   **/
   @javax.annotation.Nullable
 
-  public String getColor() {
-    return color;
+  public String getTitle() {
+    return title;
   }
 
 
-  public void setColor(String color) {
-    this.color = color;
+  public void setTitle(String title) {
+    this.title = title;
   }
 
 
@@ -87,25 +87,25 @@ public class ProjectResponse {
   }
 
 
-  public ProjectResponse title(String title) {
+  public ProjectResponse color(String color) {
     
-    this.title = title;
+    this.color = color;
     return this;
   }
 
    /**
-   * Get title
-   * @return title
+   * Get color
+   * @return color
   **/
   @javax.annotation.Nullable
 
-  public String getTitle() {
-    return title;
+  public String getColor() {
+    return color;
   }
 
 
-  public void setTitle(String title) {
-    this.title = title;
+  public void setColor(String color) {
+    this.color = color;
   }
 
 
@@ -118,23 +118,23 @@ public class ProjectResponse {
       return false;
     }
     ProjectResponse projectResponse = (ProjectResponse) o;
-    return Objects.equals(this.color, projectResponse.color) &&
+    return Objects.equals(this.title, projectResponse.title) &&
         Objects.equals(this.client, projectResponse.client) &&
-        Objects.equals(this.title, projectResponse.title);
+        Objects.equals(this.color, projectResponse.color);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(color, client, title);
+    return Objects.hash(title, client, color);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProjectResponse {\n");
-    sb.append("    color: ").append(toIndentedString(color)).append("\n");
-    sb.append("    client: ").append(toIndentedString(client)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    client: ").append(toIndentedString(client)).append("\n");
+    sb.append("    color: ").append(toIndentedString(color)).append("\n");
     sb.append("}");
     return sb.toString();
   }
