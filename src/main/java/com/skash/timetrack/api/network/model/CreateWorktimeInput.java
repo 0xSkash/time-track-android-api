@@ -26,19 +26,19 @@ import java.util.Date;
 /**
  * CreateWorktimeInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
 public class CreateWorktimeInput {
   public static final String SERIALIZED_NAME_ENDED_AT = "endedAt";
   @SerializedName(SERIALIZED_NAME_ENDED_AT)
   private Date endedAt;
 
-  public static final String SERIALIZED_NAME_DURATION = "duration";
-  @SerializedName(SERIALIZED_NAME_DURATION)
-  private Integer duration;
-
   public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
   private Date startedAt;
+
+  public static final String SERIALIZED_NAME_DURATION = "duration";
+  @SerializedName(SERIALIZED_NAME_DURATION)
+  private Integer duration;
 
   public CreateWorktimeInput() {
   }
@@ -65,28 +65,6 @@ public class CreateWorktimeInput {
   }
 
 
-  public CreateWorktimeInput duration(Integer duration) {
-    
-    this.duration = duration;
-    return this;
-  }
-
-   /**
-   * Get duration
-   * @return duration
-  **/
-  @javax.annotation.Nullable
-
-  public Integer getDuration() {
-    return duration;
-  }
-
-
-  public void setDuration(Integer duration) {
-    this.duration = duration;
-  }
-
-
   public CreateWorktimeInput startedAt(Date startedAt) {
     
     this.startedAt = startedAt;
@@ -109,6 +87,28 @@ public class CreateWorktimeInput {
   }
 
 
+  public CreateWorktimeInput duration(Integer duration) {
+    
+    this.duration = duration;
+    return this;
+  }
+
+   /**
+   * Get duration
+   * @return duration
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getDuration() {
+    return duration;
+  }
+
+
+  public void setDuration(Integer duration) {
+    this.duration = duration;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -119,13 +119,13 @@ public class CreateWorktimeInput {
     }
     CreateWorktimeInput createWorktimeInput = (CreateWorktimeInput) o;
     return Objects.equals(this.endedAt, createWorktimeInput.endedAt) &&
-        Objects.equals(this.duration, createWorktimeInput.duration) &&
-        Objects.equals(this.startedAt, createWorktimeInput.startedAt);
+        Objects.equals(this.startedAt, createWorktimeInput.startedAt) &&
+        Objects.equals(this.duration, createWorktimeInput.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(endedAt, duration, startedAt);
+    return Objects.hash(endedAt, startedAt, duration);
   }
 
   @Override
@@ -133,8 +133,8 @@ public class CreateWorktimeInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateWorktimeInput {\n");
     sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
-    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
+    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("}");
     return sb.toString();
   }

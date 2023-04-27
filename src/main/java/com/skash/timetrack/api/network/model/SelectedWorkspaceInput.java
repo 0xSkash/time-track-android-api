@@ -26,7 +26,7 @@ import java.util.UUID;
 /**
  * SelectedWorkspaceInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
 public class SelectedWorkspaceInput {
   public static final String SERIALIZED_NAME_WORKSPACE_ID = "workspaceId";
   @SerializedName(SERIALIZED_NAME_WORKSPACE_ID)
