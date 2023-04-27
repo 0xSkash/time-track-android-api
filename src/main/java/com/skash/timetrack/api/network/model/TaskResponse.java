@@ -23,15 +23,20 @@ import com.google.gson.stream.JsonWriter;
 import com.skash.timetrack.api.network.model.ProjectResponse;
 import java.io.IOException;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * TaskResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:21:24.739627+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
 public class TaskResponse {
   public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
   @SerializedName(SERIALIZED_NAME_STARTED_AT)
   private Date startedAt;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
 
   public static final String SERIALIZED_NAME_PROJECT = "project";
   @SerializedName(SERIALIZED_NAME_PROJECT)
@@ -71,6 +76,28 @@ public class TaskResponse {
 
   public void setStartedAt(Date startedAt) {
     this.startedAt = startedAt;
+  }
+
+
+  public TaskResponse id(UUID id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getId() {
+    return id;
+  }
+
+
+  public void setId(UUID id) {
+    this.id = id;
   }
 
 
@@ -172,6 +199,7 @@ public class TaskResponse {
     }
     TaskResponse taskResponse = (TaskResponse) o;
     return Objects.equals(this.startedAt, taskResponse.startedAt) &&
+        Objects.equals(this.id, taskResponse.id) &&
         Objects.equals(this.project, taskResponse.project) &&
         Objects.equals(this.endedAt, taskResponse.endedAt) &&
         Objects.equals(this.description, taskResponse.description) &&
@@ -180,7 +208,7 @@ public class TaskResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(startedAt, project, endedAt, description, duration);
+    return Objects.hash(startedAt, id, project, endedAt, description, duration);
   }
 
   @Override
@@ -188,6 +216,7 @@ public class TaskResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskResponse {\n");
     sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    project: ").append(toIndentedString(project)).append("\n");
     sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

@@ -26,19 +26,19 @@ import java.util.UUID;
 /**
  * UserResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:21:24.739627+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
   private String firstName;
 
-  public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
-  @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
-  private Boolean twoFactorEnabled;
-
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
+
+  public static final String SERIALIZED_NAME_TWO_FACTOR_ENABLED = "twoFactorEnabled";
+  @SerializedName(SERIALIZED_NAME_TWO_FACTOR_ENABLED)
+  private Boolean twoFactorEnabled;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -81,28 +81,6 @@ public class UserResponse {
   }
 
 
-  public UserResponse twoFactorEnabled(Boolean twoFactorEnabled) {
-    
-    this.twoFactorEnabled = twoFactorEnabled;
-    return this;
-  }
-
-   /**
-   * Get twoFactorEnabled
-   * @return twoFactorEnabled
-  **/
-  @javax.annotation.Nullable
-
-  public Boolean getTwoFactorEnabled() {
-    return twoFactorEnabled;
-  }
-
-
-  public void setTwoFactorEnabled(Boolean twoFactorEnabled) {
-    this.twoFactorEnabled = twoFactorEnabled;
-  }
-
-
   public UserResponse id(UUID id) {
     
     this.id = id;
@@ -122,6 +100,28 @@ public class UserResponse {
 
   public void setId(UUID id) {
     this.id = id;
+  }
+
+
+  public UserResponse twoFactorEnabled(Boolean twoFactorEnabled) {
+    
+    this.twoFactorEnabled = twoFactorEnabled;
+    return this;
+  }
+
+   /**
+   * Get twoFactorEnabled
+   * @return twoFactorEnabled
+  **/
+  @javax.annotation.Nullable
+
+  public Boolean getTwoFactorEnabled() {
+    return twoFactorEnabled;
+  }
+
+
+  public void setTwoFactorEnabled(Boolean twoFactorEnabled) {
+    this.twoFactorEnabled = twoFactorEnabled;
   }
 
 
@@ -223,8 +223,8 @@ public class UserResponse {
     }
     UserResponse userResponse = (UserResponse) o;
     return Objects.equals(this.firstName, userResponse.firstName) &&
-        Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled) &&
         Objects.equals(this.id, userResponse.id) &&
+        Objects.equals(this.twoFactorEnabled, userResponse.twoFactorEnabled) &&
         Objects.equals(this.email, userResponse.email) &&
         Objects.equals(this.selectedWorkspaceId, userResponse.selectedWorkspaceId) &&
         Objects.equals(this.avatarPath, userResponse.avatarPath) &&
@@ -233,7 +233,7 @@ public class UserResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, twoFactorEnabled, id, email, selectedWorkspaceId, avatarPath, lastName);
+    return Objects.hash(firstName, id, twoFactorEnabled, email, selectedWorkspaceId, avatarPath, lastName);
   }
 
   @Override
@@ -241,8 +241,8 @@ public class UserResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserResponse {\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    twoFactorEnabled: ").append(toIndentedString(twoFactorEnabled)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    selectedWorkspaceId: ").append(toIndentedString(selectedWorkspaceId)).append("\n");
     sb.append("    avatarPath: ").append(toIndentedString(avatarPath)).append("\n");

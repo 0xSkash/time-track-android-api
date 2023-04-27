@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * Device
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:21:24.739627+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
 public class Device {
   public static final String SERIALIZED_NAME_OS_VERSION = "osVersion";
   @SerializedName(SERIALIZED_NAME_OS_VERSION)

@@ -25,23 +25,23 @@ import java.io.IOException;
 /**
  * UserInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:21:24.739627+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:23:53.882884+02:00[Europe/Berlin]")
 public class UserInput {
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
   private String firstName;
 
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
+  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  private String lastName;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
 
-  public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
-  @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
 
   public UserInput() {
   }
@@ -68,25 +68,25 @@ public class UserInput {
   }
 
 
-  public UserInput email(String email) {
+  public UserInput lastName(String lastName) {
     
-    this.email = email;
+    this.lastName = lastName;
     return this;
   }
 
    /**
-   * Get email
-   * @return email
+   * Get lastName
+   * @return lastName
   **/
   @javax.annotation.Nullable
 
-  public String getEmail() {
-    return email;
+  public String getLastName() {
+    return lastName;
   }
 
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
 
@@ -112,25 +112,25 @@ public class UserInput {
   }
 
 
-  public UserInput lastName(String lastName) {
+  public UserInput email(String email) {
     
-    this.lastName = lastName;
+    this.email = email;
     return this;
   }
 
    /**
-   * Get lastName
-   * @return lastName
+   * Get email
+   * @return email
   **/
   @javax.annotation.Nullable
 
-  public String getLastName() {
-    return lastName;
+  public String getEmail() {
+    return email;
   }
 
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
 
@@ -144,14 +144,14 @@ public class UserInput {
     }
     UserInput userInput = (UserInput) o;
     return Objects.equals(this.firstName, userInput.firstName) &&
-        Objects.equals(this.email, userInput.email) &&
+        Objects.equals(this.lastName, userInput.lastName) &&
         Objects.equals(this.password, userInput.password) &&
-        Objects.equals(this.lastName, userInput.lastName);
+        Objects.equals(this.email, userInput.email);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, email, password, lastName);
+    return Objects.hash(firstName, lastName, password, email);
   }
 
   @Override
@@ -159,9 +159,9 @@ public class UserInput {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInput {\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();
   }
