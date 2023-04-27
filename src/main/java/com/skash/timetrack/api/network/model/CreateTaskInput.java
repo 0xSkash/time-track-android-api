@@ -27,11 +27,11 @@ import java.util.UUID;
 /**
  * CreateTaskInput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
 public class CreateTaskInput {
-  public static final String SERIALIZED_NAME_DURATION = "duration";
-  @SerializedName(SERIALIZED_NAME_DURATION)
-  private Integer duration;
+  public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
+  @SerializedName(SERIALIZED_NAME_STARTED_AT)
+  private Date startedAt;
 
   public static final String SERIALIZED_NAME_PROJECT = "project";
   @SerializedName(SERIALIZED_NAME_PROJECT)
@@ -45,32 +45,32 @@ public class CreateTaskInput {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
-  public static final String SERIALIZED_NAME_STARTED_AT = "startedAt";
-  @SerializedName(SERIALIZED_NAME_STARTED_AT)
-  private Date startedAt;
+  public static final String SERIALIZED_NAME_DURATION = "duration";
+  @SerializedName(SERIALIZED_NAME_DURATION)
+  private Integer duration;
 
   public CreateTaskInput() {
   }
 
-  public CreateTaskInput duration(Integer duration) {
+  public CreateTaskInput startedAt(Date startedAt) {
     
-    this.duration = duration;
+    this.startedAt = startedAt;
     return this;
   }
 
    /**
-   * Get duration
-   * @return duration
+   * Get startedAt
+   * @return startedAt
   **/
   @javax.annotation.Nullable
 
-  public Integer getDuration() {
-    return duration;
+  public Date getStartedAt() {
+    return startedAt;
   }
 
 
-  public void setDuration(Integer duration) {
-    this.duration = duration;
+  public void setStartedAt(Date startedAt) {
+    this.startedAt = startedAt;
   }
 
 
@@ -140,25 +140,25 @@ public class CreateTaskInput {
   }
 
 
-  public CreateTaskInput startedAt(Date startedAt) {
+  public CreateTaskInput duration(Integer duration) {
     
-    this.startedAt = startedAt;
+    this.duration = duration;
     return this;
   }
 
    /**
-   * Get startedAt
-   * @return startedAt
+   * Get duration
+   * @return duration
   **/
   @javax.annotation.Nullable
 
-  public Date getStartedAt() {
-    return startedAt;
+  public Integer getDuration() {
+    return duration;
   }
 
 
-  public void setStartedAt(Date startedAt) {
-    this.startedAt = startedAt;
+  public void setDuration(Integer duration) {
+    this.duration = duration;
   }
 
 
@@ -171,27 +171,27 @@ public class CreateTaskInput {
       return false;
     }
     CreateTaskInput createTaskInput = (CreateTaskInput) o;
-    return Objects.equals(this.duration, createTaskInput.duration) &&
+    return Objects.equals(this.startedAt, createTaskInput.startedAt) &&
         Objects.equals(this.project, createTaskInput.project) &&
         Objects.equals(this.endedAt, createTaskInput.endedAt) &&
         Objects.equals(this.description, createTaskInput.description) &&
-        Objects.equals(this.startedAt, createTaskInput.startedAt);
+        Objects.equals(this.duration, createTaskInput.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(duration, project, endedAt, description, startedAt);
+    return Objects.hash(startedAt, project, endedAt, description, duration);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateTaskInput {\n");
-    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
+    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
     sb.append("    project: ").append(toIndentedString(project)).append("\n");
     sb.append("    endedAt: ").append(toIndentedString(endedAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    startedAt: ").append(toIndentedString(startedAt)).append("\n");
+    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -26,7 +26,7 @@ import java.util.UUID;
 /**
  * WorkspaceResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
 public class WorkspaceResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -36,13 +36,13 @@ public class WorkspaceResponse {
   @SerializedName(SERIALIZED_NAME_TITLE)
   private String title;
 
-  public static final String SERIALIZED_NAME_ORGANIZTION_ID = "organiztionId";
-  @SerializedName(SERIALIZED_NAME_ORGANIZTION_ID)
-  private UUID organiztionId;
-
   public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
   @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
   private Boolean isBillable;
+
+  public static final String SERIALIZED_NAME_ORGANIZTION_ID = "organiztionId";
+  @SerializedName(SERIALIZED_NAME_ORGANIZTION_ID)
+  private UUID organiztionId;
 
   public WorkspaceResponse() {
   }
@@ -91,28 +91,6 @@ public class WorkspaceResponse {
   }
 
 
-  public WorkspaceResponse organiztionId(UUID organiztionId) {
-    
-    this.organiztionId = organiztionId;
-    return this;
-  }
-
-   /**
-   * Get organiztionId
-   * @return organiztionId
-  **/
-  @javax.annotation.Nullable
-
-  public UUID getOrganiztionId() {
-    return organiztionId;
-  }
-
-
-  public void setOrganiztionId(UUID organiztionId) {
-    this.organiztionId = organiztionId;
-  }
-
-
   public WorkspaceResponse isBillable(Boolean isBillable) {
     
     this.isBillable = isBillable;
@@ -135,6 +113,28 @@ public class WorkspaceResponse {
   }
 
 
+  public WorkspaceResponse organiztionId(UUID organiztionId) {
+    
+    this.organiztionId = organiztionId;
+    return this;
+  }
+
+   /**
+   * Get organiztionId
+   * @return organiztionId
+  **/
+  @javax.annotation.Nullable
+
+  public UUID getOrganiztionId() {
+    return organiztionId;
+  }
+
+
+  public void setOrganiztionId(UUID organiztionId) {
+    this.organiztionId = organiztionId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -146,13 +146,13 @@ public class WorkspaceResponse {
     WorkspaceResponse workspaceResponse = (WorkspaceResponse) o;
     return Objects.equals(this.id, workspaceResponse.id) &&
         Objects.equals(this.title, workspaceResponse.title) &&
-        Objects.equals(this.organiztionId, workspaceResponse.organiztionId) &&
-        Objects.equals(this.isBillable, workspaceResponse.isBillable);
+        Objects.equals(this.isBillable, workspaceResponse.isBillable) &&
+        Objects.equals(this.organiztionId, workspaceResponse.organiztionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, title, organiztionId, isBillable);
+    return Objects.hash(id, title, isBillable, organiztionId);
   }
 
   @Override
@@ -161,8 +161,8 @@ public class WorkspaceResponse {
     sb.append("class WorkspaceResponse {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    organiztionId: ").append(toIndentedString(organiztionId)).append("\n");
     sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
+    sb.append("    organiztionId: ").append(toIndentedString(organiztionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

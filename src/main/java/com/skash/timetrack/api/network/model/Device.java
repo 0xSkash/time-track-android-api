@@ -25,12 +25,8 @@ import java.io.IOException;
 /**
  * Device
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
 public class Device {
-  public static final String SERIALIZED_NAME_MANUFACTURER = "manufacturer";
-  @SerializedName(SERIALIZED_NAME_MANUFACTURER)
-  private String manufacturer;
-
   public static final String SERIALIZED_NAME_OS_VERSION = "osVersion";
   @SerializedName(SERIALIZED_NAME_OS_VERSION)
   private String osVersion;
@@ -39,34 +35,16 @@ public class Device {
   @SerializedName(SERIALIZED_NAME_MODEL)
   private String model;
 
+  public static final String SERIALIZED_NAME_MANUFACTURER = "manufacturer";
+  @SerializedName(SERIALIZED_NAME_MANUFACTURER)
+  private String manufacturer;
+
   public static final String SERIALIZED_NAME_PUSH_TOKEN = "pushToken";
   @SerializedName(SERIALIZED_NAME_PUSH_TOKEN)
   private String pushToken;
 
   public Device() {
   }
-
-  public Device manufacturer(String manufacturer) {
-    
-    this.manufacturer = manufacturer;
-    return this;
-  }
-
-   /**
-   * Get manufacturer
-   * @return manufacturer
-  **/
-  @javax.annotation.Nullable
-
-  public String getManufacturer() {
-    return manufacturer;
-  }
-
-
-  public void setManufacturer(String manufacturer) {
-    this.manufacturer = manufacturer;
-  }
-
 
   public Device osVersion(String osVersion) {
     
@@ -112,6 +90,28 @@ public class Device {
   }
 
 
+  public Device manufacturer(String manufacturer) {
+    
+    this.manufacturer = manufacturer;
+    return this;
+  }
+
+   /**
+   * Get manufacturer
+   * @return manufacturer
+  **/
+  @javax.annotation.Nullable
+
+  public String getManufacturer() {
+    return manufacturer;
+  }
+
+
+  public void setManufacturer(String manufacturer) {
+    this.manufacturer = manufacturer;
+  }
+
+
   public Device pushToken(String pushToken) {
     
     this.pushToken = pushToken;
@@ -143,24 +143,24 @@ public class Device {
       return false;
     }
     Device device = (Device) o;
-    return Objects.equals(this.manufacturer, device.manufacturer) &&
-        Objects.equals(this.osVersion, device.osVersion) &&
+    return Objects.equals(this.osVersion, device.osVersion) &&
         Objects.equals(this.model, device.model) &&
+        Objects.equals(this.manufacturer, device.manufacturer) &&
         Objects.equals(this.pushToken, device.pushToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(manufacturer, osVersion, model, pushToken);
+    return Objects.hash(osVersion, model, manufacturer, pushToken);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Device {\n");
-    sb.append("    manufacturer: ").append(toIndentedString(manufacturer)).append("\n");
     sb.append("    osVersion: ").append(toIndentedString(osVersion)).append("\n");
     sb.append("    model: ").append(toIndentedString(model)).append("\n");
+    sb.append("    manufacturer: ").append(toIndentedString(manufacturer)).append("\n");
     sb.append("    pushToken: ").append(toIndentedString(pushToken)).append("\n");
     sb.append("}");
     return sb.toString();

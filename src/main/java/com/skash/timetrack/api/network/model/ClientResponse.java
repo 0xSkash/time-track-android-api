@@ -21,42 +21,47 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * ClientResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:49:05.753948+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-27T12:00:02.837263+02:00[Europe/Berlin]")
 public class ClientResponse {
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
-  private String title;
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
 
   public static final String SERIALIZED_NAME_IS_BILLABLE = "isBillable";
   @SerializedName(SERIALIZED_NAME_IS_BILLABLE)
   private Boolean isBillable;
 
+  public static final String SERIALIZED_NAME_TITLE = "title";
+  @SerializedName(SERIALIZED_NAME_TITLE)
+  private String title;
+
   public ClientResponse() {
   }
 
-  public ClientResponse title(String title) {
+  public ClientResponse id(UUID id) {
     
-    this.title = title;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get title
-   * @return title
+   * Get id
+   * @return id
   **/
   @javax.annotation.Nullable
 
-  public String getTitle() {
-    return title;
+  public UUID getId() {
+    return id;
   }
 
 
-  public void setTitle(String title) {
-    this.title = title;
+  public void setId(UUID id) {
+    this.id = id;
   }
 
 
@@ -82,6 +87,28 @@ public class ClientResponse {
   }
 
 
+  public ClientResponse title(String title) {
+    
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * Get title
+   * @return title
+  **/
+  @javax.annotation.Nullable
+
+  public String getTitle() {
+    return title;
+  }
+
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -91,21 +118,23 @@ public class ClientResponse {
       return false;
     }
     ClientResponse clientResponse = (ClientResponse) o;
-    return Objects.equals(this.title, clientResponse.title) &&
-        Objects.equals(this.isBillable, clientResponse.isBillable);
+    return Objects.equals(this.id, clientResponse.id) &&
+        Objects.equals(this.isBillable, clientResponse.isBillable) &&
+        Objects.equals(this.title, clientResponse.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, isBillable);
+    return Objects.hash(id, isBillable, title);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClientResponse {\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isBillable: ").append(toIndentedString(isBillable)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");
     return sb.toString();
   }
